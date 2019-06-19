@@ -1,20 +1,28 @@
-largest = None
-smallest = None
+small = None
+large = None
 
-def large(largest, num):
-    if largest <= num:
-        largest = num
 while True:
-    num = input("Enter a number: ")
-    if num == "done":
-        break
     try:
-        entry = float(num)
-        large(largest, entry)
+        num = input("Enter a number: ")
+
+        if num == "done":
+            break
+        num = int(num)
+        if small is None:
+            small = num
+
+        if large is None:
+            large = num
+
+        if num > large:
+            large = num
+
+        if num < small:
+            small = num
+
     except:
         print("Invalid input")
-    continue
-    print(num)
+        continue
 
-
-print("Maximum", largest)
+print("Maximum is", large)
+print("Minimum is", small)
