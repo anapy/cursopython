@@ -1,6 +1,4 @@
 test1 = 'AB'
-#test2 = 'yo soy'
-#test2= test2.rstrip()
 def reverse(word):
     result = ''
     long = len(word)
